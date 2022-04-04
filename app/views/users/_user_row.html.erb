@@ -1,0 +1,7 @@
+<tr id="user_<%= user.id %>">
+  <td><%= user.name %></td>
+  <td><%= user.email %></td>
+  <td><%= link_to 'Show', user, class:"btn btn-primary", data: { toggle: 'modal', target: '#showModal' }, remote: true %></td>
+  <td><%= link_to 'Edit', edit_user_path(user), data: { toggle: 'modal', target: '#editModal' }, remote:true, class:"btn btn-warning" %></td>
+  <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger ", remote: true %></td>
+</tr>

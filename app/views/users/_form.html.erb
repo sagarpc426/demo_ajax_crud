@@ -1,0 +1,19 @@
+<%= form_for(@user, remote:true) do |f| %>
+
+<div class="modal-body">
+
+  <div id="errorsDiv"></div>
+
+  <div class="form-group">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, class:"form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :email %><br>
+    <%= f.text_field :email, class:"form-control" %>
+  </div>
+    <div class="actions ">
+    <%= f.submit "Submit", class:"btn btn-primary" %>
+  </div>
+</div>
+<% end %>

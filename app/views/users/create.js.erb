@@ -1,0 +1,6 @@
+<% if @user.errors.any? %>
+  $('#errorsDiv').html('<%= j render('alerts', user: @user) %>');
+<% else %>
+  $('#userTable').prepend('<%= j render('user_row', user: @user)%>');
+  $('#userModal').modal('toggle');
+<% end %>

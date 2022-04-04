@@ -1,0 +1,6 @@
+<% if @user.errors.any? %>
+  #('#errorsDiv').html('<%= j render('alerts', user: @user)%>');
+<% else %>
+  $('#user_<%= @user.id %>').replaceWith('<%= j render('user_row', user: @user)%>');
+  $('#editModal').modal('toggle');
+<% end %>
